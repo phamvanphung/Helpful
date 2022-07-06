@@ -1,0 +1,15 @@
+#!/bin/bash
+echo "Do you format code before commit ?"
+echo "Press y if you formated code, commit will apply"
+echo "Press n if you forget to format, please format code and commit again"
+while : ;do
+read -n 1 k <&1
+if [[ $k = y ]]; then
+printf "\n Commit apply \n"
+exit 0 
+else
+printf "\n Please format code and commit again !\n"
+exit 1
+fi
+done
+ 
